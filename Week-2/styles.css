@@ -1,0 +1,95 @@
+.row {
+    display: flex;
+}
+
+.square-one {
+    background-color: red;
+    height:100px;
+    width: 100px;
+}
+.square-two {
+    background-color: yellow;
+    height:100px;
+    width: 100px;
+}
+.square-three {
+    background-color: blue;
+    height:100px;
+    width: 100px;
+}
+.square-four {
+    background-color: green;
+    height:100px;
+    width: 100px;
+}
+.square{
+    position: absolute;
+    top:33vh;
+    left: 40%;
+}
+/* .square :hover .square-four {
+    transform: rotate(45deg);
+
+        /* transition: all 5s ease-in-out 0s; */
+
+@keyframes slideIn {
+    0%, 100% {
+      transform: translate(10px) rotate(0deg);
+    }
+    100% {
+      transform: translate(100px) rotate(90deg);
+    }
+  }
+
+@keyframes slideInThree {
+    0%, 100% {
+      transform: translate(10px) rotate(0deg);
+    }
+    100% {
+      transform: translate(100px) rotate(90deg);
+    }
+  }
+
+@keyframes slideInTwo {
+    0%, 100% {
+      transform: translate(10px) rotate(0deg);
+    }
+    100% {
+      transform: translate(-100px) rotate(90deg);
+    }
+  }
+
+@keyframes slideInOne {
+    0%, 100% {
+      transform: translate(10px) rotate(0deg);
+    }
+    100% {
+      transform: translate(-100px) rotate(90deg);
+    }
+  }
+  
+  
+  .square :hover .square-four { 
+    animation-name: slideIn;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+  }
+  
+  .square :hover .square-three { 
+    animation-name: slideInThree;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+  }
+  
+  .square :hover .square-two { 
+    animation-name: slideInTwo;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+  }
+  
+  .square :hover .square-one { 
+    animation-name: slideInOne;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+  }
+  
