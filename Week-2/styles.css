@@ -1,0 +1,66 @@
+*{
+  height: 100%;
+  transition-property: transform;
+  transition-duration: 2s;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.square{
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+#squareBox{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+
+.square-one {
+  transform-origin: 0% 0%;
+  background-color: red;
+}
+.square-two {
+  left: 100px;
+  transform-origin: 100% 0%;
+  background-color: yellow;
+}
+.square-three {
+  top: 100px;
+  transform-origin: 0% 100%;
+  background-color: blue;
+}
+.square-four {
+  top:100px;
+  left: 100px;
+  transform-origin: 100% 100%;
+  background-color: green;
+}
+
+h3{
+  position: absolute;
+  left: 80px;
+  top: 80px;
+}
+
+.square:hover .square-one{
+  transform: rotate(90deg);
+}
+
+.square:hover .square-two{
+  transform: rotate(-90deg);
+}
+
+.square:hover .square-three{
+  transform: rotate(-90deg);
+}
+
+.square:hover .square-four{
+  transform: rotate(90deg);
+}
