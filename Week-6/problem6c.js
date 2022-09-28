@@ -54,7 +54,6 @@ function printArray(arr,arr_size)
 }
 
 let arr= [0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1 ];
-
 let arr_size = arr.length;
 sort012(arr, arr_size);
 printArray(arr, arr_size);

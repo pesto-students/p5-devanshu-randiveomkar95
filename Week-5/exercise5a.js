@@ -33,7 +33,6 @@ function * generatorFun(){
     yield dotask2().then((task) =>{ console.log(task); });;
     yield dotask3().then((task) =>{ console.log(task); });;
 }
-
 const toDoTask = generatorFun();
 toDoTask.next();
 toDoTask.next();

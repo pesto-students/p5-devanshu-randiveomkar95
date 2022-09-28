@@ -30,6 +30,5 @@ function maxSubarraySum(arr)
     console.log(max_so_far);
     return max_so_far;
 }
-
 let a = [10, -2, 3, 5, 7, -2];
 maxSubarraySum(a);

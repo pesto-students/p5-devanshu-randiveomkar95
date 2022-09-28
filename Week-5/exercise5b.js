@@ -17,6 +17,5 @@ function vowelCount (str) {
        }
      }
    } 
-   
    let a = "Devanshu Litoria";
    vowelCount(a);

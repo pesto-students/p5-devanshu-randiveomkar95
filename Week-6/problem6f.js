@@ -36,5 +36,4 @@ function solution(arr, x)
 
 let arr = [ -1, 2, 1, -4 ];
 let x = 1;
-
 solution(arr, x);

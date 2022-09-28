@@ -29,7 +29,6 @@ function findPair(arr, size, n) {
     console.log("No such pair");
     return false;
 }
-
 let arr = [1, 8, 30, 40, 100];
 let size = arr.length;
 let n = 60;

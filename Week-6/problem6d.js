@@ -52,5 +52,4 @@ function maxProfit( price, start, end)
 }
 	let price = [7,6,4,3,1];
 	let n = price.length;
-
 	console.log(maxProfit(price, 0, n - 1));
