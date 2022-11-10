@@ -1,6 +1,6 @@
 .complete {
     background-color: rgba(27, 231, 27, 0.411);
-    padding: 5px;
+    /* padding: 5px; */
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -54,11 +54,11 @@
     padding-left: 15px;
 }
 .col-md-12 {
-    width: 100%;
-    position: relative;
     min-height: 1px;
     padding-right: 15px;
     padding-left: 15px;
+    display: grid;
+    justify-items: center;
 }
 .center {
     display: flex;
@@ -67,7 +67,7 @@
     text-align: center;
 }
 .card {
-    padding: 5px;
+    /* padding: 5px; */
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -84,7 +84,9 @@
     border-radius: 0.25rem;
 }
 .row {
-    display:flex !important;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 20px;
 }
 .btn-primary {
     color: #fff;
@@ -92,12 +94,18 @@
     border-color: #2e6da4;
     border-radius: 0.25rem;
     margin-left: 5px;
+    width: 20%;
 
 }
 .btn-success {
     color: #fff;
     background-color: #24dd1d;
     border-color: #24dd1d;
-    border-radius: 0.25rem;
+    position: absolute;
+    bottom: 0;
+    border: none;
+    width: 100%;   color: #fff;
+    background-color: #24dd1d;
+    border-color: #24dd1d;
 
 }
