@@ -1,18 +1,15 @@
 import React, {useState} from 'react'
 import style from './search.module.css';
 
-const SearchBar = () => {
-  const [userInput, setUserInput] = useState("");
-
+const SearchBar = ({setquery}) => {
   return (
     <>
     <div className={style.searchbar}>
       <input
-        type='url'
+        type='text'
         className={style["input-container"]}
-        value={userInput}
         placeholder='Type to search...'
-        onChange={(e)=>{setUserInput(e.target.value)}}
+        onChange={(e)=>{setquery(e.target.value)}}
         />
     </div>
     </>

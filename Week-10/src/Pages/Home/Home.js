@@ -38,13 +38,13 @@ const Home = () => {
   }}> Submit URL </button>
 </div>
 <div className={style.list}>
-  {userInputs?.map((v,index)=>(
-    <>
-    <div className={style["url-card"]}>
-      <p key={index} >{v?.completeURL} - <a href={v?.shortenURL} target="blank">{v?.shortenURL}</a></p>
-    </div>
-    </>
-  ))}
+    {userInputs?.map((v,index)=>(
+      <>
+      <div className={style["url-card"]}>
+        <p key={index} >{v?.completeURL} - <a href={v?.shortenURL} target="blank">{v?.shortenURL}</a></p>
+      </div>
+      </>
+    ))}
 </div>
 </>  )
 }
