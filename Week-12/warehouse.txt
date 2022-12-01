@@ -1,0 +1,28 @@
+1. Find the item that has minimum weight.
+SELECT item FROM items where weight = (select min(weight) from items);
+
+2. Find the different warehouses in “Pune”.
+SELECT * FROM `warehouses` WHERE location = 'pune'
+
+3. Find the details of items ordered by a customer “Mr. Patil”.
+SELECT cname,item,description,weight,cost
+FROM items
+INNER JOIN orders
+ON items.ono = orders.ono
+INNER JOIN customer
+ON orders.cno = customer.cno
+WHERE customer.cname = 'Mr. Patil';
+
+4. Find a Warehouse which has maximum stores.
+SELECT wname FROM warehouses where location = (select max(location) from warehouses);
+
+5. Find an item which is ordered for a minimum number of times
+SELECT item FROM items where item = (select min(item) from items) group by item;
+
+6. Find the detailed orders given by each customer.
+SELECT cname,item,description,weight,cost
+FROM items
+INNER JOIN orders
+ON items.ono = orders.ono
+INNER JOIN customer
+ON orders.cno = customer.cno
