@@ -28,6 +28,12 @@ app.use("/user",require("./routes/users"))
 //Asset Routes
 app.use("/asset",require("./routes/assets"))
 
+//Equity Routes
+app.use("/equity",require("./routes/equity"))
+
+//FixIncome Routes
+app.use("/fixIncome",require("./routes/fixIncome"))
+
 //start the server
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`)
