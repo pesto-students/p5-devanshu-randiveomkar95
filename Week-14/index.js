@@ -25,6 +25,9 @@ app.get("/", (req, res) => {
 //User Routes
 app.use("/user",require("./routes/users"))
 
+//Asset Routes
+app.use("/asset",require("./routes/assets"))
+
 //start the server
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`)
