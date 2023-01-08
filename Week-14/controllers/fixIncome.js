@@ -17,3 +17,19 @@ exports.addFixIncome = async (req, res) => {
         }
     })
 }
+
+// Search Fixed Income
+exports.searchFixIncome = async (req, res) => {
+    const month = req.query.month
+    const year = req.query.year
+    const FixIncome = await FixedIncomeModel.find()
+    let filter
+    if (month && !year) {
+     filter = FixIncome.filter(fixIncome => new Date(fixIncome.created_at).getMonth() == month-1);
+    } else if(year && !month) {
+      filter = FixIncome.filter(fixIncome => new Date(fixIncome.created_at).getFullYear() == year);
+    } else if(month && year) {
+      filter = FixIncome.filter(fixIncome => new Date(fixIncome.created_at).getFullYear() == year && new Date(fixIncome.created_at).getMonth() == month-1);
+    }
+    res.send(filter)
+}

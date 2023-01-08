@@ -4,6 +4,7 @@ const port = process.env.PORT || 5000;
 
 const conn = require("./db")
 const cors = require("cors")
+var nodemailer = require('nodemailer');
 
 app.use(cors())
 app.use(express.json())
@@ -19,7 +20,6 @@ conn.connection.on("connected", (err) => {
 
 //Default Index Page
 app.get("/", (req, res) => {
-    res.send(`<h1>Wealth Portfolio App</h1>`)
 })
 
 //User Routes

@@ -1,4 +1,5 @@
 const AssetModel = require("./../models/assets")
+var nodemailer = require('nodemailer');
 
 // Add Asset
 exports.addAsset = async (req, res) => {
@@ -16,4 +17,20 @@ exports.addAsset = async (req, res) => {
             }
         }
     })
+}
+
+// Search Asset
+exports.searchAsset = async (req, res) => {
+    const month = req.query.month
+    const year = req.query.year
+    const Asset = await AssetModel.find()
+    let filterAssests
+    if (month && !year) {
+     filterAssests = Asset.filter(asset => new Date(asset.created_at).getMonth() == month-1);
+    } else if(year && !month) {
+      filterAssests = Asset.filter(asset => new Date(asset.created_at).getFullYear() == year);
+    } else if(month && year) {
+      filterAssests = Asset.filter(asset => new Date(asset.created_at).getFullYear() == year && new Date(asset.created_at).getMonth() == month-1) ;
+    }
+    res.send(filterAssests)
 }
