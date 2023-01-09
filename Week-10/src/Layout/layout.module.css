@@ -1,0 +1,22 @@
+.navbar {
+    padding: 1rem;
+    height:20px;
+    background-color: #ccc;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+.menuList {
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+    width: 40%;
+}
+
+.footer {
+    background-color: #ccc;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}

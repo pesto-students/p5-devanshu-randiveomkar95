@@ -1,0 +1,32 @@
+* {
+    padding: 0px;
+    margin: 0px;
+  }
+.container{
+    padding: 20px;
+}
+.restaurantName {
+    font-weight: 700;
+    padding: 10px;
+}
+.outOfStock {
+    background-color: red;
+}
+ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+ul li {
+    display: flex;
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 3px;
+    border: 1px solid;
+}
+li:hover{
+    box-shadow: 0 0 5pt 2pt #D3D3D3;
+    outline: none;
+}
